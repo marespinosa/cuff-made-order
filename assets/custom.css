@@ -618,3 +618,101 @@ p{
     height: 12px;
     border-radius: 20%;
 }
+
+.variant-option-1{
+    margin-bottom: -2em;
+}
+
+.variant-option-2 label{
+    height: 80px;
+    width: 64px;
+    max-height: 80px;
+}
+
+
+.variant-option-2 .variant-option__button-label:has(input:checked) {
+  border-bottom: 1px solid #010101 !important;
+}
+
+.variant-option-2 .variant-option__button-label:has(input:checked) .variant-option__button-label__text {
+  color: #010101 !important;
+}
+
+
+.variant-option-2 .variant-option__button-label {
+  background: #1D0F0705;
+}
+
+
+.variant-option-2 .variant-option__button-label{
+    flex: 0 0 calc(3ch + 2em);
+}
+
+.variant-option-3 .variant-option__button-label{
+    height: 150px;
+    min-height: 150px;
+    width: 116px;
+    flex: 0 0 calc(3ch + 6em);
+    vertical-align: top;
+}
+
+.variant-option-3 .variant-option__image{
+    padding-top: 20px;
+}
+
+.variant-option-3 .variant-option__button-label__text{
+    margin-top: -5em;
+}
+
+.variant-option-3 label:nth-of-type(1) .variant-option__button-label__text {
+    margin-left: -5em;
+}
+
+.variant-option-3 label:nth-of-type(2) .variant-option__button-label__text {
+    margin-left: -3em;
+}
+
+.product-form .variant-picker__form{
+    margin-bottom: 56px;
+}
+
+.variant-option-3 .variant-option__button-label{
+    overflow: visible;
+}
+
+.product-form .add-to-cart{
+    font-family: var(--font-family-matter);
+    letter-spacing: 2px;
+    font-weight: 430;
+    font-size: 12px;
+}
+
+.delivery-estimate{
+    font-family: var(--font-family-matter);
+    letter-spacing: 0;
+    font-weight: 430;
+    font-size: 14px;
+    color: #01010159;
+}
+
+.delivery-estimate b{
+    color: #010101;
+}
+
+.variant-option-3 .variant-option__button-label{
+    border: 0 none;
+}
+.variant-option-3  .variant-option__button-label{
+&:has(:checked):not(.variant-option__button-label--has-swatch):not(:has([data-option-available='false']))::before{
+     border: 0 none;
+}}
+
+.variant-option-3 .variant-option__button-label  {
+  &:not(.variant-option__button-label--has-swatch)::before{
+             border: 0 none;
+    }
+}
+
+.variant-picker__form{
+    margin-bottom: 56px;
+}

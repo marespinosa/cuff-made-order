@@ -29,7 +29,6 @@
                 name="{{ product_option.name }}-{{ section.id }}"
                 value="{{ value | escape }}"
                 {% if value.selected %}checked{% endif %}
-                {% if value.available == false %}disabled{% endif %}
                 data-variant-id="{{ variant_for_value.id }}"
               >
 
@@ -38,7 +37,14 @@
               </span>
 
             <span class="variant-option__image">
-                {% if variant_for_value.featured_media %}
+             {% if forloop.parentloop.index == 3 %}
+                <img
+                src="{{ 'finish.png' | asset_url }}"
+                alt="Finish"
+                >
+
+
+          {% elsif variant_for_value.featured_media %}
                   <img
                     src="{{ variant_for_value.featured_media | image_url: width: 80 }}"
                     alt="{{ value }}"
