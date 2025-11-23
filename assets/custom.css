@@ -586,3 +586,23 @@ p{
 .variant-option-1 .variant-has-image .variant-option__image{
     display:none;
 }
+
+.variant-option__button-label{
+        border: 0 none;
+    padding: 0;
+    margin: 0;
+    height: initial;
+    max-height: 0;
+}
+.variant-option__button-label:hover{
+    background: transparent !important;
+}
+
+
+.variant-option__button-label:not(:has(:checked)) .variant-option__button-label__text {
+  color: #01010159 !important; /* 35% opacity */
+}
+
+.variant-option__button-label:has(:checked) .variant-option__button-label__text {
+  color: #010101 !important;
+}
