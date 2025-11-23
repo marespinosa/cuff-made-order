@@ -171,8 +171,8 @@ p{
 }
 
 .customize-h1{
-    font-size: 72px !important;
-    font-weight: 400 !important;
+    font-size: 72px;
+    font-weight: 400;
 }
 
 .custom-content-padding{
@@ -420,7 +420,11 @@ p{
 .recommended-inner-wrapper{
     width: 43%;
     float: right;
+<<<<<<< HEAD
+    border-top:1px solid #0101010D !important;
+=======
     border-top:1px solid #0101010D ;
+>>>>>>> 82d49f3 (updated css)
     padding-top: 3%;
 }
 
