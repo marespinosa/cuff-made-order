@@ -483,10 +483,17 @@
           "settings": {
             "reco_product": "sapphire-ring"
           }
+        },
+        "recommended_product_aLt3aU": {
+          "type": "recommended_product",
+          "settings": {
+            "reco_product": "cleo-ring"
+          }
         }
       },
       "block_order": [
-        "recommended_product_9T7BfV"
+        "recommended_product_9T7BfV",
+        "recommended_product_aLt3aU"
       ],
       "name": "Product Hero",
       "settings": {
