@@ -189,7 +189,7 @@ p{
 }
 
 .custom-content-padding .custom-btn{
-      background-color: rgba(29, 15, 7, 0.02);
+      background-color: #1D0F0705;
     font-size: 14px;
     line-height: 28px;
     color: #010101;
@@ -416,7 +416,7 @@ p{
 .recommended-inner-wrapper{
     width: 43%;
     float: right;
-    border-top: 1px solid #f8f8f5;
+    border-top:1px solid #0101010D; !important;
     padding-top: 3%;
 }
 
@@ -523,4 +523,54 @@ p{
 
 .product-details{
     display: block !important;
+}
+
+
+.title-wishlist-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.reco-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.swym-wishlist-collections-v2 {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.swym-wishlist-collections-v2 svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.heart-filled {
+  display: none;
+}
+
+.wishlist-btn.active .heart-outline {
+  display: none;
+}
+
+.wishlist-btn.active .heart-filled {
+  display: block;
+}
+
+.reco-title{
+    font-weight: 430 !important;
 }

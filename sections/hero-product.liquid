@@ -75,33 +75,72 @@
 
   </div>
 </div>
-    <div class="recommended-products-wrapper">
-        <div class="recommended-inner-wrapper">
-            <div class="width-50-float-right">
-                <h5>Explore the cuff collection</h5>
-            </div>
-
-            <div class="recommended-products-grid">
-            {% for block in section.blocks %}
-                {% if block.type == 'recommended_product' %}
-                {% assign reco = block.settings.reco_product %}
-
-                {% if reco %}
-                <div class="explore-grid-flex">
-                    <a href="{{ reco.url }}" class="explore-card">
-                    <img src="{{ reco.featured_image | image_url }}" alt="{{ reco.title }}">
-                    <p>{{ reco.title }}</p>
-                    <p class="priceReco">{{ reco.price | money }}</p>
-                    </a>
-                </div>
-                {% endif %}
-
-                {% endif %}
-            {% endfor %}
-            </div>
-
-        </div><!---end:recommended-inner-wrapper-->
+   
+   <div class="recommended-products-wrapper">
+  <div class="recommended-inner-wrapper">
+    <div class="width-50-float-right">
+      <h5>Explore the cuff collection</h5>
     </div>
+
+    <div class="recommended-products-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'recommended_product' %}
+          {% assign reco = block.settings.reco_product %}
+
+          {% if reco %}
+         <div class="explore-grid-flex">
+
+            <a href="{{ reco.url }}" class="explore-card">
+
+                <img src="{{ reco.featured_image | image_url }}" alt="{{ reco.title }}">
+
+                <div class="title-wishlist-row">
+                <p class="reco-title">{{ reco.title }}</p>
+
+             <button
+                type="button"
+                class="swym-wishlist-collections-v2 wishlist-btn"
+                data-product-id="{{ reco.id }}"
+                data-variant-id="{{ reco.selected_or_first_available_variant.id }}"
+                aria-label="Add to wishlist"
+                aria-pressed="false"
+                >
+
+                <!-- Outline Heart -->
+                <svg class="heart-outline" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.6706 5.4736C17.6806 3.8336 14.7206 4.1236 12.8906 5.9536L12.0006 6.8436L11.1106 5.9536C9.29063 4.1336 6.32064 3.8336 4.33064 5.4736C2.05064 7.3536 1.93063 10.7436 3.97063 12.7836L11.6406 20.4536C11.8406 20.6536 12.1506 20.6536 12.3506 20.4536L20.0206 12.7836C22.0706 10.7436 21.9506 7.3636 19.6706 5.4736Z"
+                    stroke="#03000C" stroke-width="1.7" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+
+                <!-- Filled Heart -->
+                <svg class="heart-filled" width="18" height="18" viewBox="0 0 24 24" fill="#03000C">
+                    <path d="M12 21s-1-.72-2.29-1.94C6.57 16.14 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-4.57 7.64-7.71 10.56C13 20.28 12 21 12 21z"/>
+                </svg>
+
+                </button>
+
+
+
+
+                </div>
+
+                <p class="priceReco">{{ reco.price | divided_by: 100 }}</p>
+
+
+            </a>
+
+            </div>
+
+          {% endif %}
+
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
 
 
 </div>
@@ -164,6 +203,46 @@ document.addEventListener("DOMContentLoaded", function () {
   activateButtons('.polish-styles');
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+  wishlistButtons.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Toggle CSS state
+      btn.classList.toggle("active");
+
+      // Swym: manually trigger add/remove wishlist
+      const productId = btn.dataset.productId;
+      const variantId = btn.dataset.variantId;
+
+      if (btn.classList.contains("active")) {
+        // Add to wishlist
+        if (window._swat) {
+          _swat.addToWishlist({
+            empi: productId,
+            epi: variantId
+          });
+        }
+      } else {
+        // Remove from wishlist
+        if (window._swat) {
+          _swat.removeFromWishlist({
+            empi: productId,
+            epi: variantId
+          });
+        }
+      }
+    });
+  });
+});
+
+
+
+
 </script>
 
 {% schema %}
