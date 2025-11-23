@@ -488,6 +488,10 @@ p{
       border-radius: 0;
 }
 
+.variant-option__button-label .variant-option__button-label__text{
+    color: #010101;
+}
+
 .finish-options img:hover{
       border-bottom: 1px solid #010101;
       border-radius: 0;

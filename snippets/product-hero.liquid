@@ -1,0 +1,20 @@
+  <!-- LEFT SIDE: IMAGE SLIDER -->
+  <div class="product-image-container">
+
+    <button class="nav-btn prev-btn">
+      <img class="arrow-icon" src="{{ 'arrowrtletf.png' | asset_url }}" alt="arrow">
+    </button>
+
+    <img id="product-image" class="product-image"
+      src="{{ product.featured_image | image_url }}"
+      alt="{{ product.title }}">
+
+    <button class="nav-btn next-btn">
+      <img class="arrow-icon" src="{{ 'arrowleft.png' | asset_url }}" alt="arrow">
+    </button>
+
+    <div id="image-count" class="image-count">
+      1 / {{ product.images.size }}
+    </div>
+
+  </div>
