@@ -1,0 +1,126 @@
+<section class="section-wrapper">
+
+  <!-- MOBILE VIEW -->
+  <div class="timelessmobile">
+      <h5 class="padding-bottom-24">{{ section.settings.mobile_subheading }}</h5>
+      <h1 class="padding-bottom-64">{{ section.settings.mobile_heading }}</h1>
+
+      <div class="images-wrapper-mobile">
+          {% if section.settings.mobile_image_1 != blank %}
+            <img src="{{ section.settings.mobile_image_1 | img_url: 'master' }}" alt="Image 1">
+          {% endif %}
+
+          {% if section.settings.mobile_image_2 != blank %}
+            <img src="{{ section.settings.mobile_image_2 | img_url: 'master' }}" alt="Image 2">
+          {% endif %}
+      </div>
+
+      <p><small>{{ section.settings.mobile_description }}</small></p>
+  </div>
+
+  <!-- DESKTOP VIEW -->
+  <div class="timeless-wrapper desktop-display-none">
+
+      <div class="left side-left-info">
+          <h5 class="padding-bottom-24">{{ section.settings.desktop_subheading }}</h5>
+          <h1 class="padding-bottom-64">{{ section.settings.desktop_heading }}</h1>
+
+          {% if section.settings.desktop_image_left != blank %}
+            <img src="{{ section.settings.desktop_image_left | img_url: 'master' }}" alt="Left Image">
+          {% endif %}
+      </div>
+
+      <div class="right">
+          <div class="content-right-side">
+
+              {% if section.settings.desktop_image_right != blank %}
+                <img src="{{ section.settings.desktop_image_right | img_url: 'master' }}" alt="Right Image">
+              {% endif %}
+
+              <p><small>{{ section.settings.desktop_description }}</small></p>
+
+          </div>
+      </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Elegance Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mobile Content"
+    },
+    {
+      "type": "text",
+      "id": "mobile_subheading",
+      "label": "Mobile Subheading",
+      "default": "Behind the ring"
+    },
+    {
+      "type": "text",
+      "id": "mobile_heading",
+      "label": "Mobile Heading",
+      "default": "Timeless Elegance"
+    },
+    {
+      "type": "richtext",
+      "id": "mobile_description",
+      "label": "Mobile Description",
+      "default": "<p>Our most coveted engagement ring silhouette...</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_1",
+      "label": "Mobile Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_2",
+      "label": "Mobile Image 2"
+    },
+
+    {
+      "type": "header",
+      "content": "Desktop Content"
+    },
+    {
+      "type": "text",
+      "id": "desktop_subheading",
+      "label": "Desktop Subheading",
+      "default": "Behind the ring"
+    },
+    {
+      "type": "text",
+      "id": "desktop_heading",
+      "label": "Desktop Heading",
+      "default": "Timeless Elegance"
+    },
+    {
+      "type": "richtext",
+      "id": "desktop_description",
+      "label": "Desktop Description",
+      "default": "<p>Our most coveted engagement ring silhouette...</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image_left",
+      "label": "Desktop Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image_right",
+      "label": "Desktop Right Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Elegance Section",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
