@@ -337,115 +337,13 @@
                     },
                     "accelerated-checkout": {
                       "type": "accelerated-checkout",
+                      "disabled": true,
                       "static": true,
                       "settings": {},
                       "blocks": {}
                     }
                   },
                   "block_order": []
-                },
-                "accordion_jjaG39": {
-                  "type": "accordion",
-                  "name": "t:names.accordion",
-                  "settings": {
-                    "icon": "plus",
-                    "dividers": true,
-                    "type_preset": "h5",
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "accordion_row_WyAjHK": {
-                      "type": "_accordion-row",
-                      "settings": {
-                        "heading": "CARE & MAINTENANCE",
-                        "open_by_default": false,
-                        "icon": "none",
-                        "width": 20
-                      },
-                      "blocks": {
-                        "text_UfENHV": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p>To maintain the beauty and integrity of your purchase, we recommend treating it with care. Simple maintenance practices, such as gentle washing and proper storage, can effectively preserve the longevity of your favorites. We encourage you to refer to the care instructions included with each item, designed to help you keep your purchase in top condition.</p>",
-                            "width": "100%",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "text_UfENHV"
-                      ]
-                    },
-                    "accordion_row_xktep7": {
-                      "type": "_accordion-row",
-                      "settings": {
-                        "heading": "SHIPPING & RETURNS",
-                        "open_by_default": false,
-                        "icon": "none",
-                        "width": 20
-                      },
-                      "blocks": {
-                        "text_6rQYtf": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p>We strive to process and ship all orders in a timely manner, working diligently to ensure that your items are on their way to you as soon as possible. Need to return something? Just let us know. </p>",
-                            "width": "100%",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "text_6rQYtf"
-                      ]
-                    }
-                  },
-                  "block_order": [
-                    "accordion_row_WyAjHK",
-                    "accordion_row_xktep7"
-                  ]
                 }
               },
               "block_order": [
@@ -453,8 +351,7 @@
                 "divider_grFKCP",
                 "product_description_8gHdXj",
                 "variant_picker_nhbWcG",
-                "buy_buttons_B7HMzq",
-                "accordion_jjaG39"
+                "buy_buttons_B7HMzq"
               ]
             }
           },
@@ -463,7 +360,6 @@
           ]
         }
       },
-      "disabled": true,
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
@@ -473,13 +369,6 @@
         "color_scheme": "scheme-1",
         "padding-block-start": 0,
         "padding-block-end": 20
-      }
-    },
-    "hero_product_HfC63H": {
-      "type": "hero-product",
-      "name": "Product Hero",
-      "settings": {
-        "product": ""
       }
     },
     "timeless_elegance_HGQb9V": {
@@ -514,7 +403,6 @@
   },
   "order": [
     "main",
-    "hero_product_HfC63H",
     "timeless_elegance_HGQb9V",
     "customize_section_TKwYXC"
   ]
