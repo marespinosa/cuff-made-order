@@ -102,13 +102,15 @@ p{
         margin: 0 0 10px;
  }
 
- .right p {
+ .right p,  .right p small {
         text-align: left;
         font-family: var(--font-family-matter);
         font-size: 14px;
         line-height: 28px;
         color: #010101; 
         font-weight: 430;
+        letter-spacing: 0;
+        text-transform: none;
     }
 
  h1{
@@ -377,6 +379,7 @@ p{
     opacity: 0;
     pointer-events: none; /* cannot click when hidden */
     transition: opacity 0.3s ease;
+    background: transparent !important;
 }
 
 /* Show arrows when hovering container */
@@ -416,7 +419,7 @@ p{
 .recommended-inner-wrapper{
     width: 43%;
     float: right;
-    border-top:1px solid #0101010D; !important;
+    border-top:1px solid #0101010D !important;
     padding-top: 3%;
 }
 
@@ -442,6 +445,7 @@ p{
 
 .recommended-inner-wrapper h5{
     padding-bottom: 24px;
+    letter-spacing: 2px;
 }
 
 .explore-card p{
