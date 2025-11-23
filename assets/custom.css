@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Matter Trial";
-  src: url("fonts/MatterTRIAL-Regular.woff2") format("woff2");
+  src: url("MatterTRIAL-Regular.woff2") format("woff2");
   font-weight: normal;
 }
 
@@ -20,10 +20,14 @@ h1, h2, h3, h4, h5, h6{
 h5, p, small, span, li, a, button{
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 2px;
     margin-bottom: 8px;
     font-family: var(--font-family-matter);
     font-weight: 430;
+}
+
+p{
+    letter-spacing: 1px;
+    text-transform: none;
 }
 
 .customize-section {
@@ -179,16 +183,20 @@ h5, p, small, span, li, a, button{
     font-size: 14px;
     line-height: 28px;
     color: #010101;
+    letter-spacing: 1px;
+    margin-bottom: 56px;
 }
 
 .custom-content-padding .custom-btn{
-    background: #fafaf6 !important;
+      background-color: rgba(29, 15, 7, 0.02);
     font-size: 14px;
     line-height: 28px;
     color: #010101;
     font-weight: 430;
     font-family: var(--font-family-matter);
     border: 0 none !important;
+    padding:16px 40px;
+    
 }
 
 
