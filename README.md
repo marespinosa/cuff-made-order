@@ -79,5 +79,3 @@ By streamlining the layout, I can ensure the page remains responsive across all 
 👤 Author
 
 Maricon Espinosa
-Frontend Developer
-(You can add your portfolio, LinkedIn, or website links)
