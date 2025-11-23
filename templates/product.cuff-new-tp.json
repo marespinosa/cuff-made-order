@@ -477,6 +477,17 @@
     },
     "hero_product_HfC63H": {
       "type": "hero-product",
+      "blocks": {
+        "recommended_product_9T7BfV": {
+          "type": "recommended_product",
+          "settings": {
+            "reco_product": "sapphire-ring"
+          }
+        }
+      },
+      "block_order": [
+        "recommended_product_9T7BfV"
+      ],
       "name": "Product Hero",
       "settings": {
         "product": ""
