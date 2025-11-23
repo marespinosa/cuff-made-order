@@ -62,6 +62,5 @@ To simplify development and avoid maintaining two separate codebases for desktop
 ---
 
 # 👤 Author
-Maricon Espinosa
 
 **Maricon Espinosa**
