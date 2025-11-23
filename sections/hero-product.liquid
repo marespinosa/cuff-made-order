@@ -2,26 +2,9 @@
 
 <div class="product-wrapper">
 
-  <!-- LEFT SIDE: IMAGE SLIDER -->
-  <div class="product-image-container">
+{% render 'product-hero', product: product %}
 
-    <button class="nav-btn prev-btn">
-      <img class="arrow-icon" src="{{ 'arrowrtletf.png' | asset_url }}" alt="arrow">
-    </button>
 
-    <img id="product-image" class="product-image"
-      src="{{ product.featured_image | image_url }}"
-      alt="{{ product.title }}">
-
-    <button class="nav-btn next-btn">
-      <img class="arrow-icon" src="{{ 'arrowleft.png' | asset_url }}" alt="arrow">
-    </button>
-
-    <div id="image-count" class="image-count">
-      1 / {{ product.images.size }}
-    </div>
-
-  </div>
 
   <!-- RIGHT SIDE -->
   <div class="product-details">
@@ -32,74 +15,10 @@
 
     <div class="price">From {{ product.price | money }}</div>
 
-
- {% assign section_settings = section.settings %}
-{% unless product.has_only_default_variant %}
-  {% liquid
-    assign button_background_brightness = section.settings.color_scheme.settings.foreground | color_brightness
-    if button_background_brightness < 105
-      assign strikethrough_color_mix = '#000'
-    else
-      assign strikethrough_color_mix = '#fff'
-    endif
-  %}
-
-  <variant-picker
-    class="variant-picker spacing-style variant-picker--{{ section_settings.alignment }}"
-    style="--color-strikethrough-mix: {{ strikethrough_color_mix }};"
-    data-section-id="{{ section.id }}"
-    data-product-id="{{ product.id }}"
-    data-product-url="{{ product.url }}"
-  >
-    <form class="variant-picker__form">
-      {% for product_option in product.options_with_values %}
-        <fieldset class="variant-option variant-option--buttons">
-          <legend>{{ product_option.name }}</legend>
-
-          {% for value in product_option.values %}
-            {% assign variant_for_value = value.variant %}
-
-            <label class="variant-option__button-label variant-has-image">
-              <input
-                type="radio"
-                name="{{ product_option.name }}-{{ section.id }}"
-                value="{{ value | escape }}"
-                {% if value.selected %}checked{% endif %}
-                {% if value.available == false %}disabled{% endif %}
-                data-variant-id="{{ variant_for_value.id }}"
-              >
-
-              <span class="variant-option__image">
-                {% if variant_for_value.featured_media %}
-                  <img
-                    src="{{ variant_for_value.featured_media | image_url: width: 80 }}"
-                    alt="{{ value }}"
-                  >
-                {% else %}
-                  <img
-                    src="{{ product.featured_media | image_url: width: 80 }}"
-                    alt="{{ value }}"
-                  >
-                {% endif %}
-              </span>
-
-              <span class="variant-option__button-label__text">
-                {{ value }}
-              </span>
-            </label>
-          {% endfor %}
-        </fieldset>
-      {% endfor %}
-
-      <script type="application/json">
-        {{ product.selected_or_first_available_variant | json }}
-      </script>
-    </form>
-  </variant-picker>
-{% endunless %}
+    
 
 
-
+{% render 'product-info-variants', product: product %}
 
 
     <!-- ATC BUTTON -->
