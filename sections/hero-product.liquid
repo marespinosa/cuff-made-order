@@ -76,34 +76,23 @@
   </div>
 </div>
 
-<!-- RECOMMENDED PRODUCTS WRAPPER (STATIC) -->
-<div class="recommended-products-wrapper">
-  <div class="recommended-inner-wrapper">
+<div class="recommended-products-grid">
+  {% for block in section.blocks %}
+    {% if block.type == 'recommended_product' %}
+      {% assign reco = block.settings.reco_product %}
 
-    <div class="width-50-float-right">
-      <h5>Explore the cuff collection</h5>
-    </div>
-
-    <div class="recommended-products-grid">
-
+      {% if reco %}
       <div class="explore-grid-flex">
-        <div class="explore-card">
-          <img src="{{ 'sapphire.png' | asset_url }}">
-          <p>Sapphire Ring</p>
-          <p class="priceReco">$199.00</p>
-        </div>
+        <a href="{{ reco.url }}" class="explore-card">
+          <img src="{{ reco.featured_image | image_url }}" alt="{{ reco.title }}">
+          <p>{{ reco.title }}</p>
+          <p class="priceReco">{{ reco.price | money }}</p>
+        </a>
       </div>
+      {% endif %}
 
-      <div class="explore-grid-flex">
-        <div class="explore-card">
-          <img src="{{ 'cleo.png' | asset_url }}">
-          <p>Cleo Ring</p>
-          <p class="priceReco">$199.00</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
+    {% endif %}
+  {% endfor %}
 </div>
 
 </div>
@@ -189,7 +178,20 @@ document.addEventListener("DOMContentLoaded", function () {
           "label": "Product image"
         }
       ]
+    },
+    {
+  "type": "recommended_product",
+  "name": "Recommended Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "reco_product",
+      "label": "Pick recommended product"
     }
+  ]
+}
+
+
   ],
   "presets": [
     { "name": "Product Hero" }
