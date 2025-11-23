@@ -87,7 +87,7 @@ p{
 .timeless-wrapper  {
         max-width: 1400px;
         margin: auto;
-        padding: 60px 30px;
+        padding: 100px 30px 60px 30px;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         gap: 60px;
@@ -235,6 +235,7 @@ p{
         text-align: center;
         position: relative;
         margin-top: -3em !important;
+        background: #1D0F0705;
     }
 
     .product-image {
@@ -419,7 +420,7 @@ p{
 .recommended-inner-wrapper{
     width: 43%;
     float: right;
-    border-top:1px solid #0101010D !important;
+    border-top:1px solid #0101010D ;
     padding-top: 3%;
 }
 
@@ -715,4 +716,14 @@ p{
 
 .variant-picker__form{
     margin-bottom: 56px;
+}
+
+.menu-list__list-item a{
+    letter-spacing: 2px;
+}
+
+.variant-option__button-label{
+    &:has(:checked):not(.variant-option__button-label--has-swatch):not(:has([data-option-available='false']))::before{
+        border:0 none !important;
+    }
 }

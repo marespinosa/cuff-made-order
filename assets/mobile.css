@@ -14,8 +14,14 @@
         font-size: 32px;
     }
 
+    .product-image{
+        max-width: 100%;
+    }
+
+
+
     .desktop-display-none{
-        display: none;
+        display: none !important
     }
 
     .desktop-display-none img.timelessmobile, .timelessmobile{
@@ -67,6 +73,8 @@
         line-height: 28px;
         color: #010101; 
         font-weight: 430;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .custom-content-padding{
@@ -93,12 +101,53 @@
     }
 
     .recommended-inner-wrapper{
-        width: 100% !important;
+        width: 95% !important;
         float: none !important;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
     }
 
+    .product-wrapper{
+        display: block !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+
+    header .section--page-width{
+        background: #1D0F0705;
+    }
+
+    .product-details{  
+     
+         padding-top: 24px !important;
+        width: 95%;
+        margin: 0 auto;
+        margin-right: 20px;
+    }
+
+    .add-to-cart{
+        width: 97% !important;
+    }
+
+    .recommended-products-grid{
+        margin-right: 3%;
+    }
+
+    .recommended-inner-wrapper{
+        border: 0 none !important;
+    }
+
+    .custom-content-padding{
+        width: 100%;
+    padding-top: 3% !important;
+    padding-left: 0 !important;
+    }
+
+    .customize-h1{
+        font-size: 32px !important;
+    }
     
 }
 
@@ -154,6 +203,14 @@
             font-size: 26px;
         }
 
+        .product-wrapper{
+            display: block !important;
+        }
+
+        .product-details{
+            margin-top: 40px;
+        }
+
 
     }
 
@@ -180,6 +237,11 @@
     }
      .customize-h1{
         line-height: 35px !important;
+    }
+
+    .product-image-container{
+        width: 118% !important;
+        margin-left: -5% !important;
     }
 }
 
