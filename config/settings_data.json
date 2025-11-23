@@ -9,6 +9,11 @@
  */
 {
   "current": {
+    "logo": "shopify://shop_images/logo.png",
+    "logo_inverse": "shopify://shop_images/logo.png",
+    "logo_height": 36,
+    "logo_height_mobile": 28,
+    "favicon": "shopify://shop_images/logo.png",
     "type_body_font": "red_hat_display_n4",
     "type_subheading_font": "red_hat_display_n6",
     "type_heading_font": "trirong_n2",
@@ -62,6 +67,7 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 0,
     "variant_button_width": "equal-width-buttons",
+    "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -336,9 +342,7 @@
           "selected_variant_hover_border_color": "#1a1a1a"
         }
       }
-    },
-    "logo_height": 36,
-    "logo_height_mobile": 28
+    }
   },
   "presets": {
     "Vessel": {
