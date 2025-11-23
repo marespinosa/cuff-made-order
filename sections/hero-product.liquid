@@ -1,0 +1,197 @@
+{% assign product = section.settings.product | default: product %}
+
+<div class="product-wrapper">
+
+  <!-- LEFT SIDE: IMAGE SLIDER -->
+  <div class="product-image-container">
+
+    <button class="nav-btn prev-btn">
+      <img class="arrow-icon" src="{{ 'arrowrtletf.png' | asset_url }}" alt="arrow">
+    </button>
+
+    <img id="product-image" class="product-image"
+      src="{{ product.featured_image | image_url }}"
+      alt="{{ product.title }}">
+
+    <button class="nav-btn next-btn">
+      <img class="arrow-icon" src="{{ 'arrowleft.png' | asset_url }}" alt="arrow">
+    </button>
+
+    <div id="image-count" class="image-count">
+      1 / {{ product.images.size }}
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="product-details">
+
+    <h5>Made to Order</h5>
+
+    <h1 class="product-title">{{ product.title }}</h1>
+
+    <div class="price">From {{ product.price | money }}</div>
+
+    <!-- VARIANT TITLE BUTTONS -->
+    <div class="variant-title padding-top-20">
+      <button class="active">Metal</button>
+      <button>18k Yellow</button>
+      <button>Gold</button>
+    </div>
+
+    <!-- VARIANT IMAGE BUTTONS -->
+    <div class="variant-buttons">
+      {% for block in section.blocks %}
+        {% if block.type == 'image' %}
+        <button>
+          <img src="{{ block.settings.hero_image | image_url }}" alt="">
+        </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- FINISH TITLE -->
+    <div class="polish-styles padding-top-20 padding-top-30">
+      <button class="active">Finish</button>
+      <button>High Polish</button>
+    </div>
+
+    <!-- FINISH IMAGES -->
+    <div class="finish-options">
+      <button><img src="{{ 'finish.png' | asset_url }}"></button>
+      <button><img src="{{ 'polished.png' | asset_url }}"></button>
+    </div>
+
+    <!-- ATC BUTTON -->
+    <form action="/cart/add" method="post">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <button class="add-to-cart">
+        Add to cart – {{ product.price | money }}
+      </button>
+    </form>
+
+    <div class="delivery-estimate">
+      Order today & receive by <b>20th of May 2024</b>
+    </div>
+
+  </div>
+</div>
+
+<!-- RECOMMENDED PRODUCTS WRAPPER (STATIC) -->
+<div class="recommended-products-wrapper">
+  <div class="recommended-inner-wrapper">
+
+    <div class="width-50-float-right">
+      <h5>Explore the cuff collection</h5>
+    </div>
+
+    <div class="recommended-products-grid">
+
+      <div class="explore-grid-flex">
+        <div class="explore-card">
+          <img src="{{ 'sapphire.png' | asset_url }}">
+          <p>Sapphire Ring</p>
+          <p class="priceReco">$199.00</p>
+        </div>
+      </div>
+
+      <div class="explore-grid-flex">
+        <div class="explore-card">
+          <img src="{{ 'cleo.png' | asset_url }}">
+          <p>Cleo Ring</p>
+          <p class="priceReco">$199.00</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ----------------------------------
+      DYNAMIC SLIDER IMAGES FROM SHOPIFY
+     ---------------------------------- */
+
+  const images = [
+    {% for image in product.images %}
+      "{{ image | image_url }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  let currentIndex = 0;
+
+  const productImage = document.getElementById("product-image");
+  const imageCount = document.getElementById("image-count");
+
+  function updateImage() {
+    productImage.src = images[currentIndex];
+    imageCount.textContent = (currentIndex + 1) + " / " + images.length;
+  }
+
+  document.querySelector(".next-btn").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+  });
+
+  document.querySelector(".prev-btn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+  });
+
+  updateImage();
+
+  /* ----------------------------------
+      ACTIVE BUTTON HANDLER
+     ---------------------------------- */
+
+  function activateButtons(selector) {
+    const groups = document.querySelectorAll(selector);
+
+    groups.forEach(group => {
+      group.addEventListener('click', function(e) {
+        if (e.target.tagName.toLowerCase() === 'button') {
+          group.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+          e.target.classList.add('active');
+        }
+      });
+    });
+  }
+
+  activateButtons('.variant-title');
+  activateButtons('.variant-buttons');
+  activateButtons('.polish-styles');
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Product Hero Section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Select product"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Hero Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Product image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Product Hero" }
+  ]
+}
+{% endschema %}
