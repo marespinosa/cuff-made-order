@@ -78,8 +78,9 @@ p{
 .custom-right img {
         width: 100%;
         max-width: 420px;
-        margin: auto;
+        margin: 0;
         display: block;
+        float: right;
  }
 
 
