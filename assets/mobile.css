@@ -1,0 +1,187 @@
+
+@media (max-width: 1290px) {
+    
+.custom-content-padding{
+    width: 70%;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+}
+
+@media (max-width: 890px) {
+    .side-left-info h1{
+        font-size: 32px;
+    }
+
+    .desktop-display-none{
+        display: none;
+    }
+
+    .desktop-display-none img.timelessmobile, .timelessmobile{
+        display: block !important
+    }
+
+    .timelessmobile h5, .timelessmobile h1 {
+         display: block !important;
+         text-align: center;
+    }
+
+    .timelessmobile h5{
+        padding-top: 5%;
+        text-transform: uppercase;
+        font-family: var(--font-family-matter);
+        font-weight: 430;
+        letter-spacing: 3px;
+
+    }
+    .images-wrapper-mobile{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    .images-wrapper-mobile img{
+        width: 50%;
+    }
+
+    .images-wrapper-mobile img:nth-of-type(2) {
+        padding-top: 50px; 
+    }
+
+    .images-wrapper-mobile img {
+    transition: transform 0.4s ease; 
+    }
+
+    .images-wrapper-mobile img:hover {
+        transform: scale(1.08); /* scale up */
+    }
+
+    .timelessmobile p{
+        text-align: center;
+        font-family: var(--font-family-matter);
+        font-size: 14px;
+        line-height: 28px;
+        color: #010101; 
+        font-weight: 430;
+    }
+
+    .custom-content-padding{
+        padding-top: 0;
+        padding-left: 0;
+        width: 100%;
+
+    }
+
+    .customize-h1{
+        font-size: 32px !important;
+        margin: 0 !important;
+    }
+    .customize-h1 br{
+        display: none;
+    }
+
+    .customize-section{
+        grid-template-columns: 1fr !important;
+    }
+    
+    .padding-bottom-24{
+        padding-bottom:0 !important;
+    }
+
+    
+}
+
+
+   
+@media (max-width: 768px) {
+        .custom-section {
+            grid-template-columns: 1fr;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .custom-left h1 {
+            font-size: 28px;
+        }
+
+        .custom-left p {
+            margin: 0 auto 20px;
+        }
+
+        .custom-btn {
+            margin-top: 10px;
+        }
+
+        .custom-right img {
+            max-width: 300px;
+        }
+
+         .section-wrapper {
+            grid-template-columns: 1fr;
+            padding: 30px 20px;
+            gap: 30px;
+        }
+
+        .left h1 {
+            font-size: 28px;
+        }
+
+        .right img {
+            margin-bottom: 10px;
+        }
+
+       .product-wrapper {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .product-image {
+            max-width: 360px;
+        }
+
+        .product-details h1 {
+            font-size: 26px;
+        }
+
+
+    }
+
+
+@media (max-width: 590px){
+     .timelessmobile p{
+        width: 300px;
+        margin:  0 auto;
+        line-height: 18px;
+        padding-top: 20px;
+    }
+
+    .timelessmobile h1{
+        font-size: 32px;
+    }
+    .timelessmobile h5{
+        font-size: 12px;
+    }
+    .padding-bottom-64{
+        padding-bottom: 30px;
+    }
+    .padding-bottom-24{
+        padding-bottom: 8px;
+    }
+     .customize-h1{
+        line-height: 35px !important;
+    }
+}
+
+
+@media (max-width: 320px){
+     .timelessmobile p{
+        width: 100%;
+    }
+   
+
+
+}
