@@ -328,7 +328,7 @@ p{
     .delivery-estimate {
         font-size: 12px;
         margin-bottom: 25px;
-        color: #555;
+        padding-top: 20px;
     }
 
     /* EXPLORE COLLECTION */
