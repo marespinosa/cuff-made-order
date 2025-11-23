@@ -19,7 +19,7 @@
   >
     <form class="variant-picker__form">
       {% for product_option in product.options_with_values %}
-        <fieldset class="variant-option variant-option--buttons variant-option-[{{ forloop.index }}]">
+        <fieldset class="variant-option variant-option--buttons variant-option-{{ forloop.index }}">
           {% for value in product_option.values %}
             {% assign variant_for_value = value.variant %}
 

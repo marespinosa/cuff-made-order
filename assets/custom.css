@@ -582,3 +582,7 @@ p{
 .reco-title{
     font-weight: 430 !important;
 }
+
+.variant-option-1 .variant-has-image .variant-option__image{
+    display:none;
+}
