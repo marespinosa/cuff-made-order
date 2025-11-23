@@ -33,7 +33,11 @@
                 data-variant-id="{{ variant_for_value.id }}"
               >
 
-              <span class="variant-option__image">
+              <span class="variant-option__button-label__text">
+                {{ value }}
+              </span>
+
+            <span class="variant-option__image">
                 {% if variant_for_value.featured_media %}
                   <img
                     src="{{ variant_for_value.featured_media | image_url: width: 80 }}"
@@ -47,9 +51,6 @@
                 {% endif %}
               </span>
 
-              <span class="variant-option__button-label__text">
-                {{ value }}
-              </span>
             </label>
           {% endfor %}
         </fieldset>
@@ -62,3 +63,22 @@
   </variant-picker>
 {% endunless %}
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const labels = document.querySelectorAll(
+    '.variant-option-2 .variant-option__button-label__text'
+  );
+
+  labels.forEach(label => {
+    let text = label.innerText.trim();
+
+    // remove the words but keep the rest
+    text = text.replace(/\b(Metal|Gold|Yellow)\b/i, "").trim();
+
+    label.innerText = text;
+  });
+});
+
+</script>

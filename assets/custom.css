@@ -599,10 +599,22 @@ p{
 }
 
 
-.variant-option__button-label:not(:has(:checked)) .variant-option__button-label__text {
+.variant-picker__form .variant-option__button-label:not(:has(:checked)) .variant-option__button-label__text {
   color: #01010159 !important; /* 35% opacity */
 }
 
-.variant-option__button-label:has(:checked) .variant-option__button-label__text {
+.variant-picker__form .variant-option__button-label:has(:checked) .variant-option__button-label__text {
   color: #010101 !important;
+}
+
+.variant-picker__form .variant-option__image{
+    
+    position: absolute;
+    margin-top: 50px;
+}
+
+.variant-option-2 .variant-option__image img{
+    width: 12px;
+    height: 12px;
+    border-radius: 20%;
 }
