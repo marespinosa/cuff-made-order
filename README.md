@@ -1,81 +1,67 @@
-🛠 Tech Stack
 
-Liquid
+> **Note:** `173573538039` is the original theme.  
+> Make sure to **create a Git branch first**, then connect that theme on Shopify.  
+> Do all development on the **staging theme**, not the live one.
 
-CSS3 / SCSS (or Tailwind, if used)
-JavaScript / TypeScript (specify which one you used)
-Update the above list to match your actual implementation.
+---
 
+# ✨ Front-end Preview
 
-✨ Install on CLI
-
-1. Log in to Shopify via CLI
-Run this in CMD, Git Bash, or Terminal:
-shopify login --store cuff-collection-test.myshopify.com
-This will open a browser window and ask you to confirm login.
-
-2. Pull the Theme from Shopify
-After logging in:
-shopify theme pull --theme=173573538039
-This downloads the theme files from Shopify into your local machine.
-
-
-3. Run the Theme Locally (Development Mode)
-Use this command:
-shopify theme dev
-This starts a local dev server and gives you a preview URL:
-http://127.0.0.1:9292/products/cuff-ring
-Your changes will hot-reload in the browser.
-
-4. Push Changes Back to Shopify (Live Theme)
-When you’re ready to publish updates:
-shopify theme push --theme=173573538039
-
-Note: 173573538039 is the original theme, make sure create branch first on git then connect on the theme on shopify. Do development on the staging theme.
-
-✨ front end:
 https://cuff-collection-test.myshopify.com/products/cuff-ring
 
+---
 
-✨ Files:
+# ✨ Files
 
-sections/
-hero-product.liquid
-customize-section.liquid (Customise section)
-timeless-elegance.liquid:(Timeless Elegance)
+### **sections/**
+- `hero-product.liquid`  
+- `customize-section.liquid` — (Customise section)  
+- `timeless-elegance.liquid` — (Timeless Elegance)
 
-snippets/
-product-hero.liquid
-product-info-variants.liquid
+### **snippets/**
+- `product-hero.liquid`  
+- `product-info-variants.liquid`
 
-Product Template:
-templates\product.cuff-new-tp.json:
+### **Product Template**
+- `templates/product.cuff-new-tp.json`
 
+---
 
+# ✨ Developer’s POV
 
-✨ Developers POV:
+## ✨ Design Decisions
+- **90% pixel-perfect implementation**  
 
-✨ Design decisions 
+---
 
-90% pixel-perfect
+# ✨ Challenges Faced — Blockages
 
-✨ Challenges faced - Blockage
+### **Product Featured section**  
+The design was **not followed exactly** because it does not look good on desktop when implemented literally.
 
-Product Featured - is not followed due to Ui/Ux designs. Its not good on desktop if the design is followed:
-https://www.awesomescreenshot.com/image/57564352?key=a3683ae9e1b3bbb78de2c988574992b5 - this is the result instead
+Bad result when following the exact design:  
+https://www.awesomescreenshot.com/image/57564352?key=a3683ae9e1b3bbb78de2c988574992b5
 
+Improved and polished version (with correct padding rules):  
+https://www.awesomescreenshot.com/image/57564357?key=e50b09c25a58f1379cf5dd43f7a21c60
 
-Finish and Polished followed the rules on css padding
-https://www.awesomescreenshot.com/image/57564357?key=e50b09c25a58f1379cf5dd43f7a21c60 instead on the designs, since the 2 are different variant
+This follows proper CSS spacing because the two variants are different.
 
-Reasons:
+---
 
-To simplify development and avoid maintaining two separate codebases for desktop and mobile, I created the second version of the layout instead of strictly following the original design. 
-This approach keeps the structure cleaner, reduces repetitive markup, and makes the styling easier to manage. 
-By streamlining the layout, I can ensure the page remains responsive across all devices without relying on overly long or duplicated code.
+### **Reasons for the Decision**
 
+To simplify development and avoid maintaining two separate codebases for desktop and mobile:
 
+- A modified version of the layout was created instead of strictly following the Figma design.  
+- This keeps the structure cleaner and reduces repetitive markup.  
+- It makes styling easier to manage.  
+- Ensures responsiveness across all devices.  
+- Avoids overly long or duplicated code.
 
-👤 Author
+---
 
+# 👤 Author
 Maricon Espinosa
+
+**Maricon Espinosa**
