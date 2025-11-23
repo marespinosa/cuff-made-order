@@ -486,23 +486,10 @@
         "button_label": "Customize",
         "button_link": ""
       }
-    },
-    "timeless_elegance_QBiB3V": {
-      "type": "timeless-elegance",
-      "name": "Elegance Section",
-      "settings": {
-        "mobile_subheading": "Behind the ring",
-        "mobile_heading": "Timeless Elegance",
-        "mobile_description": "<p>Our most coveted engagement ring silhouette...</p>",
-        "desktop_subheading": "Behind the ring",
-        "desktop_heading": "Timeless Elegance",
-        "desktop_description": "<p>Our most coveted engagement ring silhouette...</p>"
-      }
     }
   },
   "order": [
     "main",
-    "timeless_elegance_QBiB3V",
     "customize_section_TKwYXC"
   ]
 }
