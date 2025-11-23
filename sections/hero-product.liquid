@@ -75,25 +75,34 @@
 
   </div>
 </div>
+    <div class="recommended-products-wrapper">
+        <div class="recommended-inner-wrapper">
+            <div class="width-50-float-right">
+                <h5>Explore the cuff collection</h5>
+            </div>
 
-<div class="recommended-products-grid">
-  {% for block in section.blocks %}
-    {% if block.type == 'recommended_product' %}
-      {% assign reco = block.settings.reco_product %}
+            <div class="recommended-products-grid">
+            {% for block in section.blocks %}
+                {% if block.type == 'recommended_product' %}
+                {% assign reco = block.settings.reco_product %}
 
-      {% if reco %}
-      <div class="explore-grid-flex">
-        <a href="{{ reco.url }}" class="explore-card">
-          <img src="{{ reco.featured_image | image_url }}" alt="{{ reco.title }}">
-          <p>{{ reco.title }}</p>
-          <p class="priceReco">{{ reco.price | money }}</p>
-        </a>
-      </div>
-      {% endif %}
+                {% if reco %}
+                <div class="explore-grid-flex">
+                    <a href="{{ reco.url }}" class="explore-card">
+                    <img src="{{ reco.featured_image | image_url }}" alt="{{ reco.title }}">
+                    <p>{{ reco.title }}</p>
+                    <p class="priceReco">{{ reco.price | money }}</p>
+                    </a>
+                </div>
+                {% endif %}
 
-    {% endif %}
-  {% endfor %}
-</div>
+                {% endif %}
+            {% endfor %}
+            </div>
+
+        </div><!---end:recommended-inner-wrapper-->
+    </div>
+
 
 </div>
 
