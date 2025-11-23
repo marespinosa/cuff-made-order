@@ -33,11 +33,10 @@
     <div class="price">From {{ product.price | money }}</div>
 
     <!-- VARIANT TITLE BUTTONS -->
-    <div class="variant-title padding-top-20">
-      <button class="active">Metal</button>
-      <button>18k Yellow</button>
-      <button>Gold</button>
-    </div>
+   {% render 'variant-main-picker', 
+    product: product, 
+    section: section 
+    %}
 
     <!-- VARIANT IMAGE BUTTONS -->
     <div class="variant-buttons">

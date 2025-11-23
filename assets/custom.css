@@ -408,7 +408,9 @@ p{
 }
 .recommended-products-wrapper{
      max-width: 1400px;
-    margin: 0 auto  ;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .recommended-inner-wrapper{
@@ -519,3 +521,6 @@ p{
 }
 
 
+.product-details{
+    display: block !important;
+}
