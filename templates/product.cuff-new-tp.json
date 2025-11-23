@@ -478,7 +478,8 @@
       "type": "customize-section",
       "name": "Customize Personal",
       "settings": {
-        "mobile_image": "shopify://shop_images/personalTouch_fb16adc4-eff6-41c8-957d-16a39a95b5c8.png",
+        "mobile_image": "shopify://shop_images/personalTouch-mob.png",
+        "desktop_image": "shopify://shop_images/personalTouch_fb16adc4-eff6-41c8-957d-16a39a95b5c8.png",
         "subheading": "Customise",
         "heading": "Add your personal touch",
         "description": "Create your dream engagement ring with our flexible configuration tools. Tailor its materials, cut & details to suit your personal preferences.",
