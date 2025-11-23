@@ -463,6 +463,7 @@
           ]
         }
       },
+      "disabled": true,
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
@@ -502,9 +503,17 @@
         "button_label": "Customize",
         "button_link": ""
       }
+    },
+    "hero_product_BjLWTc": {
+      "type": "hero-product",
+      "name": "Product Hero",
+      "settings": {
+        "product": ""
+      }
     }
   },
   "order": [
+    "hero_product_BjLWTc",
     "main",
     "timeless_elegance_HGQb9V",
     "customize_section_TKwYXC"
