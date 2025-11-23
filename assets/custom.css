@@ -420,11 +420,7 @@ p{
 .recommended-inner-wrapper{
     width: 43%;
     float: right;
-<<<<<<< HEAD
     border-top:1px solid #0101010D !important;
-=======
-    border-top:1px solid #0101010D ;
->>>>>>> 82d49f3 (updated css)
     padding-top: 3%;
 }
 
@@ -730,4 +726,9 @@ p{
     &:has(:checked):not(.variant-option__button-label--has-swatch):not(:has([data-option-available='false']))::before{
         border:0 none !important;
     }
+}
+
+
+.variant-option__button-label__text{
+        text-transform: none !important;
 }
